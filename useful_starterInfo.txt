@@ -1,0 +1,112 @@
+# create venv
+1. create folder
+2. run: python3 -m venv folder_name
+
+3 activate the virtual environment
+# source /path/to/new/virtual/environment/bin/activate
+# in this case this resulted in: source customer_analytics_course_2022/bin/activate
+4. run: cd folder_name
+5. run: code . 
+
+
+# ACTIVATE THE VIRTUAL environment INSIDE VSCODE!!!
+1. ctrl + shift + p
+2.  Locate your Virtual Environment:
+    Python: select interpreter > Enter interpreter path > Find
+3. Once you locate your virtual env select your python version:
+    your-virtual-env > bin > python3.
+4. restart your terminal and you should be in the virtual environment
+
+
+# To do it permanently do the following:
+1. open the project 
+2. navigate to file > preferences > settings
+3. on the top right find the settings.json
+4. fill it with the following json (and adjust the path to the specific python IN THE DIRECTORY!!)
+"{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.defaultInterpreterPath": "~/repos/vscode_repos/venv_vs_python_test/bin/python3"
+
+}"
+5. now save it and return back to the main terminal; close it; press control+ shift + package
+6. select interpreter: python.defaultinterpreterpath
+7. restart terminal to see whether you are in the venv
+
+
+# link to git (in folder_name)
+1. run: git init
+2. run: git add .
+3. run: git commit -m "initial commit"
+4. git remote add origin "https from the git repo you want to push to"
+4. git push origin master
+
+
+
+# run in the same terminal
+import sys
+
+
+real_prefix = getattr(sys, "real_prefix", None)
+base_prefix = getattr(sys, "base_prefix", sys.prefix)
+
+running_in_virtualenv = (base_prefix or real_prefix) != sys.prefix
+
+running_in_virtualenv
+
+
+
+
+IMPORTANT! Afer initiallizing everything just run in the terminal: 
+"Install package 'python3-pip' to provide command 'pip'? [N/y] y" or a pip install command 
+
+IMPORTANT! You should always use the bash TERMINAL (lower right next the terminal window) to add, commit, and push stuff!!!
+
+
+
+
+
+############
+To set up a virtual environment for a cloned repository,
+Generally, the following order is the most appropriated:
+
+- $ git clone <Project A>  # Cloning project repository
+- $ cd <Project A> # Enter to project directory
+- $ python3 -m venv my_venv # If not created, creating virtualenv
+- $ source ./my_venv/bin/activate # Activating virtualenv
+- (my_venv)$ pip3 install -r ./requirements.txt # Installing dependencies
+- (my_venv)$ deactivate # When you want to leave virtual environment
+All installed dependencies at step 5 will be unavailable after you leave virtual environment.
+
+
+
+# create python virtual environment with vs code
+1. create a folder in repositories folder
+2. code: "python3 -m venv folder_name"
+3. change directory to folder "cd folder_name"
+4. check whether venv was set up by executing "ls" which should list a couple of files
+5. open vscode "code ." 
+
+6. Jupyter notebook file etc --> main.ipynb etc
+
+
+
+
+
+
+
+# create new repository on git and link it to this folder created above 
+the assumption is that you are in the folder above
+1. git init 
+2. git add .
+3. git commit -m "initial commit"
+4. git push (origin remote etc)
+
+
+
+# set up linter for code norm control
+1. setting open command palette
+2. seach linter
+3. choose python: select linter
+4. select pylint
