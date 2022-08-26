@@ -1,0 +1,2 @@
+Note: the current R repository that you initialized: 
+- you can set up the directory in the terminal and any changes that are being made in R studio or so can then be commited later on via the terminal
