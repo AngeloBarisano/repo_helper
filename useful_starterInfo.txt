@@ -110,3 +110,7 @@ the assumption is that you are in the folder above
 2. seach linter
 3. choose python: select linter
 4. select pylint
+
+
+
+note :pip install -r requirements.txt
