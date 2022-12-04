@@ -7,7 +7,7 @@
 # in this case this resulted in: source customer_analytics_course_2022/bin/activate
 4. run: cd folder_name
 5. run: code . 
-
+6. Create a GIT IGNORE FILE!!!
 
 # ACTIVATE THE VIRTUAL environment INSIDE VSCODE!!!
 1. ctrl + shift + p
