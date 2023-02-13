@@ -33,7 +33,7 @@
 5. now save it and return back to the main terminal; close it; press control+ shift + package
 6. select interpreter: python.defaultinterpreterpath
 7. restart terminal to see whether you are in the venv
-
+8. in the terminal: export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 # link to git (in folder_name)
 1. run: git init
